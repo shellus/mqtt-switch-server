@@ -122,7 +122,7 @@ class MQTTSwitchServer:
 
         # 初始化MQTT客户端（使用新API）
         self.client = mqtt.Client(
-            client_id="mqtt-switch-server",
+            client_id=self.mqtt_config['client_id'],
             callback_api_version=mqtt.CallbackAPIVersion.VERSION2
         )
         self.client.username_pw_set(

@@ -2,6 +2,7 @@ mqtt:
   broker: mqtt://127.0.0.1:1883
   username: myusername
   password: mypassword
+  client_id: mqtt-switch-server-001
   base_topic: myprefix-for-acl-pass
 
 devices:
