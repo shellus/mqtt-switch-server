@@ -1,0 +1,12 @@
+mqtt:
+  broker: mqtt://127.0.0.1:1883
+  username: myusername
+  password: mypassword
+  base_topic: myprefix-for-acl-pass
+
+devices:
+  - name: MyTestLight
+    id: test-light
+    enable_action: echo 1 > /tmp/test-light.txt
+    disable_action: echo 0 > /tmp/test-light.txt
+    state_command: cat /tmp/test-light.txt 2>/dev/null || echo 0
