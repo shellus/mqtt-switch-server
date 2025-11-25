@@ -22,6 +22,11 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 python3 server.py
+
+# systemd服务（需先完成宿主机环境配置）
+sudo cp mqtt-switch-server.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable --now mqtt-switch-server
 ```
 
 ## MQTT主题

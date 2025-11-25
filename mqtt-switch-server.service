@@ -1,0 +1,12 @@
+[Unit]
+Description=MQTT Switch Server
+After=network.target
+
+[Service]
+WorkingDirectory=/data/compose/mqtt-switch-server
+ExecStart=/data/compose/mqtt-switch-server/venv/bin/python3 server.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
